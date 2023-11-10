@@ -20,11 +20,26 @@
             padding: 10px 0;
         }
 
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 9px;
-        }
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 92%;
+  text-align: center;
+ 
+}
+		.arifucontainer {
+		background-color: pink;
+		border-radius: 10px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+		padding: 30px;
+		width: 92%;
+		text-align: center;		
+		}
+		.arifucontainer img{
+			width: 50%
+		}
 
         .container li {
             font-size: 14px;
@@ -168,6 +183,27 @@
         #class5{
         	display: none;     
         }
+        table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        text-align: left;
+        }
+        
+        th, td {
+        padding: 12px;
+        border-bottom: 1px solid #dee2e6;
+        }
+        
+        th {
+        background-color: #f8f9fa;
+        color: #6c757d;
+        text-transform: uppercase;
+        font-size: 12px;
+        }
+        #arifuidiotcontent{
+        	display: none;
+        }
     </style>
 </head>
 <body>
@@ -244,32 +280,61 @@
 	
 </div>
 
+<div class = "arifucontainer" id = "arifuidiotcontent">
+ 	<img src="arifu.jpg">
+   <h1>Arifa Khan</h1>
+   <p>Overthinker</p>
+
+   <table>
+     <tr>
+       <td>Name</td>
+       <td>Arifa Khan</td>
+     </tr>
+     <tr>
+     <td>Roll No.</td>
+     <td>15</td>
+     </tr>     
+     <tr>
+       <td>Occupation</td>
+       <td>Overthinking</td>
+     </tr>
+     <tr>
+       <td>Favourite Subject</td>
+       <td>English and Science</td>
+     </tr>
+     <tr>
+     <td>Personality</td>
+     <td>Cute</td>
+     </tr>
+     
+   </table>
+</div>
+
 <div id = "class5" >
 	<div class="class5picture">
 		<img src="grouppic5.jpg">
 </div>
-</div>
+
     <script>
         
     	const roll6 = "0006A";
     	const roll10 = "0010A";
-    	document.getElementById("submit").addEventListener("click", function () {
-    	const passwordInput = document.getElementById("password").value;
-    	const content = document.getElementById("content");
-    	
-    	if (passwordInput === roll6) {
-    	// Correct password entered, reveal the content
-    	roll6content.style.display = "block";
-    	
-    	} else if (passwordInput === roll10) {
-    	// Correct password entered, reveal the content
-    	roll10content.style.display = "block";
-    	
-    	} else {
-    	alert("Incorrect password. Please try again.");
-    	}
-    	});
+    document.getElementById("submit").addEventListener("click", function () {
+    const passwordInput = document.getElementById("password").value;
     
+    if (passwordInput === "0006A") {
+    // Correct password entered, reveal the content
+    document.getElementById("roll6content").style.display = "block";
+    } else if (passwordInput === "0010A") {
+    // Correct password entered, reveal the content
+    document.getElementById("roll10content").style.display = "block";
+    } else if (passwordInput === "ARIFUIDIOT") {
+    // Correct password entered, reveal the content
+    document.getElementById("arifuidiotcontent").style.display = "block";
+    } else {
+    alert("Incorrect password. Please try again.");
+    }
+    });
     
     
     
